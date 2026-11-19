@@ -27,7 +27,7 @@
 需要 DSH ≥ 0.2.0-rc.2 且 < 0.3，Node.js ≥ 20。
 
 ```bash
-npx -y --package @deepseek-ai/dsh dsh plugin --profile web add "github:Huangsir/dsh-auto-compact"
+dsh plugin --profile web add "github:Huangsir/dsh-auto-compact"
 ```
 
 这条命令直接从 GitHub 安装并挂载到 profile。装完重启 DSH 并强刷浏览器，输入区右侧会出现阈值圆环。

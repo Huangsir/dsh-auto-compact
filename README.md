@@ -27,7 +27,7 @@ Three fields set the defaults: 「模型最大 Context 小于 300K」 (below 300
 Requires DSH ≥ 0.2.0-rc.2 (and < 0.3) and Node.js ≥ 20.
 
 ```bash
-npx -y --package @deepseek-ai/dsh dsh plugin --profile web add "github:Huangsir/dsh-auto-compact"
+dsh plugin --profile web add "github:Huangsir/dsh-auto-compact"
 ```
 
 The command installs the package from GitHub and mounts it in the profile. Restart DSH and hard-refresh the browser — the ring appears next to the input.
