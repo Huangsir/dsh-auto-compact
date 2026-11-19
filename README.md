@@ -27,25 +27,16 @@ Three fields set the defaults: 「模型最大 Context 小于 300K」 (below 300
 Requires DSH ≥ 0.2.0-rc.2 (and < 0.3) and Node.js ≥ 20.
 
 ```bash
-git clone https://github.com/Huangsir/dsh-auto-compact.git
-cd dsh-auto-compact
-npx -y --package @deepseek-ai/dsh dsh plugin --profile web add "$PWD"
+npx -y --package @deepseek-ai/dsh dsh plugin --profile web add "github:Huangsir/dsh-auto-compact"
 ```
 
-The profile links to this checkout, so `git pull` plus a DSH restart is enough to update it. Restart DSH and hard-refresh the browser afterwards — the ring appears next to the input.
+The command installs the package from GitHub and mounts it in the profile. Restart DSH and hard-refresh the browser — the ring appears next to the input.
 
 > The `dsh-auto-compact` package on npm (latest 0.1.2) is an older, unrelated build. Install from this repository to get this code.
 
 ## Use
 
 Click the ring to open the panel: drag the slider to set a session override, or press 「恢复默认」 to drop it. A threshold change only takes effect at the next pre-step or turn-end check.
-
-## Development
-
-```bash
-npm ci --legacy-peer-deps   # peer deps ship with DSH; legacy mode avoids the resolver conflict
-npm test
-```
 
 ## License
 

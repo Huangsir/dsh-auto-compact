@@ -27,25 +27,16 @@
 需要 DSH ≥ 0.2.0-rc.2 且 < 0.3，Node.js ≥ 20。
 
 ```bash
-git clone https://github.com/Huangsir/dsh-auto-compact.git
-cd dsh-auto-compact
-npx -y --package @deepseek-ai/dsh dsh plugin --profile web add "$PWD"
+npx -y --package @deepseek-ai/dsh dsh plugin --profile web add "github:Huangsir/dsh-auto-compact"
 ```
 
-profile 会以链接方式指向这份 checkout，之后 `git pull` 再重启 DSH 就能更新。装完重启 DSH 并强刷浏览器，输入区右侧会出现阈值圆环。
+这条命令直接从 GitHub 安装并挂载到 profile。装完重启 DSH 并强刷浏览器，输入区右侧会出现阈值圆环。
 
 > npm 上的 `dsh-auto-compact`（最新 0.1.2）是另一个更早的版本，和本仓库不是同一份代码，要装这份请从 GitHub 安装。
 
 ## 使用
 
 点圆环打开面板：拖滑杆设置当前会话的手动阈值，点「恢复默认」清除。阈值改动要等下一次每步前或回合结束的检查才会触发压缩。
-
-## 开发
-
-```bash
-npm ci --legacy-peer-deps   # peer 依赖由 DSH 自带，用 legacy 模式绕开解析冲突
-npm test
-```
 
 ## 许可证
 
